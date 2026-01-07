@@ -209,3 +209,5 @@ __marimo__/
 target/
 
 *.bkp
+
+.DS_Store

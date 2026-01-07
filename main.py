@@ -72,7 +72,7 @@ def generate_customers(number_of_customers: int) -> None:
             {"id": i + 1, "city": faker.city(), "country": faker.country()}
         )
 
-    write_to_csv("cutomers.csv", customers)
+    write_to_csv("customer.csv", customers)
 
 
 def get_product_hierarchy() -> dict[str, dict[str, Sequence[Product]]]:
@@ -140,11 +140,11 @@ def generate_products() -> int:
 
         category_id += 1
 
-    write_to_csv("categories.csv", categories)
-    write_to_csv("sub_categories.csv", sub_categories)
-    write_to_csv("products.csv", products)
+    write_to_csv("category.csv", categories)
+    write_to_csv("sub_category.csv", sub_categories)
+    write_to_csv("product.csv", products)
 
-    return product_id
+    return len(products)
 
 
 def generate_orders(
@@ -190,8 +190,8 @@ def generate_orders(
             )
             order_item_id += 1
 
-    write_to_csv("orders.csv", orders)
-    write_to_csv("order_items.csv", order_items)
+    write_to_csv("order.csv", orders)
+    write_to_csv("order_item.csv", order_items)
 
 
 def main() -> None:
